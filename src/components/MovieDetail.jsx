@@ -48,7 +48,7 @@ export default function MovieDetail() {
           <p className='movie-detail-info-desc'>{movie.overview}</p>
           <p className='movie-detail-info-genres-list'>
             {movie.genres.map((genre) => (
-              <span key={genre.id}>{genre.name} </span>
+              <span key={genre.id}>{genre.name} * </span>
             ))}
           </p>
         </div>
