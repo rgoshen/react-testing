@@ -1,6 +1,6 @@
+import { POSTER_SIZE } from '../utilities/appConstants';
+import MovieDetail from './MovieDetail';
 import './MovieCard.css';
-
-const POSTER_SIZE = 'original';
 
 export default function MovieCard({ movie, config }) {
   return (

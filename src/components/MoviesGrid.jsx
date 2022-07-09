@@ -9,7 +9,7 @@ export default function MoviesGrid() {
 
   const getConfig = async () => {
     try {
-      const res = await fetch(BASE_URL + 'configuration?api_key=' + API_KEY);
+      const res = await fetch(BASE_URL + 'configuration' + API_KEY);
       const data = await res.json();
       setConfig(data);
     } catch (error) {
@@ -17,11 +17,9 @@ export default function MoviesGrid() {
     }
   };
 
-  const getMovies = async () => {
+  const getNowPlayingMovies = async () => {
     try {
-      const res = await fetch(
-        BASE_URL + 'movie/now_playing?api_key=' + API_KEY
-      );
+      const res = await fetch(BASE_URL + 'movie/now_playing' + API_KEY);
       const data = await res.json();
       setMovies(data.results);
     } catch (error) {
@@ -31,7 +29,7 @@ export default function MoviesGrid() {
 
   useEffect(() => {
     getConfig();
-    getMovies();
+    getNowPlayingMovies();
   }, []);
 
   return (
