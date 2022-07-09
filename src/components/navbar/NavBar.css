@@ -1,11 +1,13 @@
 .nav {
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   gap: 2rem;
   padding: 0.5rem 1rem;
+  position: sticky;
+  top: 0;
 }
 
 .nav-site-title {
