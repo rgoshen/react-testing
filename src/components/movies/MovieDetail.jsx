@@ -13,7 +13,7 @@ import './MovieDetail.css';
 export default function MovieDetail() {
   const { id } = useParams();
   const [movie, setMovie] = useState({});
-  const [actors, setActors] = useState([]);
+  const [cast, setCast] = useState([]);
 
   const getMovie = async () => {
     try {
@@ -25,11 +25,11 @@ export default function MovieDetail() {
     }
   };
 
-  const getActors = async () => {
+  const getCast = async () => {
     try {
       const res = await fetch(BASE_URL + `movie/${id}/credits` + API_KEY);
       const credits = await res.json();
-      setActors(credits.cast.slice(0, 4));
+      setCast(credits.cast.slice(0, 4));
     } catch (error) {
       console.error(error);
     }
@@ -37,7 +37,7 @@ export default function MovieDetail() {
 
   useEffect(() => {
     getMovie();
-    getActors();
+    getCast();
     window.scrollTo(0, 0);
   }, [id]);
 
@@ -68,11 +68,11 @@ export default function MovieDetail() {
             </span>
           </p>
           <p className='movie-detail-info-cast'>
-            {actors.map((actor, index) =>
-              index !== actors.length - 1 ? (
-                <span key={actor.credit_id}>{actor.name + ', '}</span>
+            {cast.map((member, index) =>
+              index !== cast.length - 1 ? (
+                <span key={member.credit_id}>{member.name + ', '}</span>
               ) : (
-                <span key={actor.credit_id}>{actor.name}</span>
+                <span key={member.credit_id}>{member.name}</span>
               )
             )}
           </p>
