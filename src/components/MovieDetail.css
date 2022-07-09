@@ -1,0 +1,34 @@
+.movie-detail-backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.movie-detail-details {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 1;
+  margin-top: 25%;
+  display: flex;
+  padding: 30px;
+  text-align: left;
+  gap: 20px;
+}
+
+.movie-detail-poster {
+  position: relative;
+  border-radius: 10px;
+  margin-top: -170px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.movie-detail-info-title {
+  text-align: center;
+}
+
+.movie-detail-info-genres-list {
+  list-style: none;
+}
