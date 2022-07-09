@@ -18,11 +18,16 @@
   gap: 20px;
 }
 
+.movie-detail-info {
+  color: white;
+}
+
 .movie-detail-poster {
   position: relative;
   border-radius: 10px;
   margin-top: -170px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  max-width: 15%;
 }
 
 .movie-detail-info-title {

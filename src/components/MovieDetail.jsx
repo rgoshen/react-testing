@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import {
   BASE_URL,
   API_KEY,
@@ -9,11 +10,12 @@ import {
 import './MovieDetail.css';
 
 export default function MovieDetail() {
+  const { id } = useParams();
   const [movie, setMovie] = useState({});
 
   const getMovieDetail = async () => {
     try {
-      const res = await fetch(BASE_URL + 'movie/<id>' + API_KEY);
+      const res = await fetch(BASE_URL + `movie/${id}` + API_KEY);
       const detail = await res.json();
       setMovie(detail);
     } catch (error) {
@@ -41,15 +43,15 @@ export default function MovieDetail() {
           alt={movie.title + ' Poster'}
           className='movie-detail-poster'
         />
-      </div>
-      <div className='movie-detail-info'>
-        <h1 className='movie-detail-info-title'>{movie.title}</h1>
-        <p className='movie-detail-info-desc'>{movie.overview}</p>
-        <p className='movie-detail-info-genres-list'>
-          {movie.genres.map((genre) => (
-            <span key={genre.id}>{genre.name} </span>
-          ))}
-        </p>
+        <div className='movie-detail-info'>
+          <h1 className='movie-detail-info-title'>{movie.title}</h1>
+          <p className='movie-detail-info-desc'>{movie.overview}</p>
+          <p className='movie-detail-info-genres-list'>
+            {movie.genres.map((genre) => (
+              <span key={genre.id}>{genre.name} </span>
+            ))}
+          </p>
+        </div>
       </div>
     </div>
   );
