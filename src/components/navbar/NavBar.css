@@ -11,8 +11,9 @@
   top: 0;
 }
 
-.nav-site-title {
-  font-size: 2.5rem;
+.nav-brand img {
+  width: 30px;
+  height: 30px;
 }
 
 .nav a {
