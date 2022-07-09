@@ -36,7 +36,6 @@ export default function MoviesGrid() {
 
   return (
     <>
-      <h1 className='movies-grid-title'>Movies List</h1>
       <Filter filter={filter} setFilter={setFilter} />
       <div className='movies-grid'>
         {movies

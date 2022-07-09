@@ -5,7 +5,7 @@ import './MovieCard.css';
 export default function MovieCard({ movie, config }) {
   return (
     <div className='movie-card'>
-      <Link to={`movie/${movie.id}`}>
+      <Link to={`/${movie.id}`}>
         {config.images.base_url && (
           <img
             src={config.images?.base_url + POSTER_SIZE + movie.poster_path}
