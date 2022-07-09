@@ -1,10 +1,10 @@
-import MoviesList from './components/MoviesList';
+import MoviesGrid from './components/MoviesGrid';
 import './App.css';
 
 function App() {
   return (
     <div className='App'>
-      <MoviesList />
+      <MoviesGrid />
     </div>
   );
 }

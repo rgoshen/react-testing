@@ -1,5 +1,4 @@
-.movies-container-list {
-  list-style: none;
+.movies-grid {
   margin: 0.625rem;
   padding: 1.25rem;
   display: flex;
