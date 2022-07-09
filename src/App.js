@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MoviesGrid from './components/MoviesGrid';
-import MovieDetail from './components/MovieDetail';
+import MoviesGrid from './components/movies/MoviesGrid';
+import MovieDetail from './components/movies/MovieDetail';
 import './App.css';
 
 function App() {

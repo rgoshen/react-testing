@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { API_KEY, BASE_URL } from '../utilities/appConstants';
+import { API_KEY, BASE_URL } from '../../utilities/appConstants';
 import MovieCard from './MovieCard';
-import Filter from './Filter';
+import Filter from '../Filter';
 import './MoviesGrid.css';
 
 export default function MoviesGrid() {

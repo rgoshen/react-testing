@@ -6,8 +6,8 @@ import {
   POSTER_SIZE,
   BACKDROP_SIZE,
   BASE_IMAGE_URL,
-} from '../utilities/appConstants';
-import formatDate from '../utilities/formatDate';
+} from '../../utilities/appConstants';
+import formatDate from '../../utilities/formatDate';
 import './MovieDetail.css';
 
 export default function MovieDetail() {

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { POSTER_SIZE } from '../utilities/appConstants';
+import { POSTER_SIZE } from '../../utilities/appConstants';
 import './MovieCard.css';
 
 export default function MovieCard({ movie, config }) {
