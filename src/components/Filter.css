@@ -1,9 +1,12 @@
 .filter-label {
   font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .filter-input {
   background-color: transparent;
   border-radius: 5px;
   margin: 5px;
+  padding: 5px;
+  font-size: 1.5rem;
 }
