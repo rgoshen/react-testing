@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { API_KEY, BASE_URL } from '../utilities/appConstants';
 import MovieCard from './MovieCard';
+import Filter from './Filter';
 import './MoviesGrid.css';
 
 export default function MoviesGrid() {
   const [movies, setMovies] = useState([]);
   const [config, setConfig] = useState({});
+  const [filter, setFilter] = useState('');
 
   const getConfig = async () => {
     try {
@@ -35,10 +37,15 @@ export default function MoviesGrid() {
   return (
     <>
       <h1 className='movies-grid-title'>Movies List</h1>
+      <Filter filter={filter} setFilter={setFilter} />
       <div className='movies-grid'>
-        {movies.map((movie) => (
-          <MovieCard key={movie.id} movie={movie} config={config} />
-        ))}
+        {movies
+          .filter((movie) =>
+            movie.title.toLowerCase().includes(filter.toLowerCase())
+          )
+          .map((movie) => (
+            <MovieCard key={movie.id} movie={movie} config={config} />
+          ))}
       </div>
     </>
   );

@@ -1,0 +1,9 @@
+.filter-label {
+  font-weight: bold;
+}
+
+.filter-input {
+  background-color: transparent;
+  border-radius: 5px;
+  margin: 5px;
+}
